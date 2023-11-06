@@ -9,14 +9,14 @@ class Solution
 		Arrays.sort(A);
 		Arrays.sort(B);
 		for (int i = 0; i < B.length; i++) {
-			answer += A[i] * B[B.length-(1+i)];
+			b[i] = B[i];
 		}
 
-//		Arrays.sort(b, Collections.reverseOrder());
-//
-//		for (int i = 0; i < A.length; i++) {
-//			answer += A[i] * b[i];
-//		}
+		Arrays.sort(b, Collections.reverseOrder());
+
+		for (int i = 0; i < A.length; i++) {
+			answer += A[i] * b[i];
+		}
 
 		return answer;
 	}
